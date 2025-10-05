@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+tensorflow
+librosa
+soundfile
+python-multipart
+scikit-learn
+matplotlib
+seaborn
+tqdm
+pickle-mixin
+av
+uvicorn[standard]
+websockets
+websockets

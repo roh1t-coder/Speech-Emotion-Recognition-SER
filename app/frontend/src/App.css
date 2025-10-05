@@ -1,0 +1,152 @@
+body {
+    margin: 0;
+    font-family:
+        -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+        "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #121212;
+    color: white;
+}
+
+/* Sinewave animated dots */
+.dot-sinewave-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    height: 48px;
+    gap: 22px;
+    min-height: 42px;
+}
+
+.dot-sine {
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 0 4px;
+    box-shadow: 0 1px 12px 0 rgba(0, 123, 255, 0.28);
+    transition: transform 0.13s cubic-bezier(0.44, 0, 0.56, 1);
+    will-change: transform;
+}
+
+.emotion-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7em;
+    margin-bottom: 1.6rem;
+    padding: 0.5rem 1.4rem;
+    border-radius: 2rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.18);
+    background: rgba(30, 40, 72, 0.36);
+    border: 1.2px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(14px);
+    color: #fff;
+    min-width: 144px;
+    min-height: 42px;
+    transition: background 0.33s;
+    user-select: none;
+}
+
+.emotion-emoji {
+    font-size: 2rem;
+    margin-right: 0.1em;
+}
+
+.emotion-label {
+    text-transform: capitalize;
+    font-size: 1.18rem;
+    font-weight: 500;
+}
+
+.emotion-confidence {
+    margin-left: 0.6em;
+    font-size: 1rem;
+    color: #b3e0ff;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+button {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin: 0 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: white;
+    transition:
+        background 0.3s,
+        transform 0.2s;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+#record {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+#realtime-toggle.active {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+#realtime-toggle.active:hover {
+    background-color: #218838;
+}
+
+#record:hover {
+    background-color: #0056b3;
+}
+
+#record.recording {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+#record.recording:hover {
+    background-color: #c82333;
+}

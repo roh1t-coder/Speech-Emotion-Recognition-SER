@@ -1,0 +1,16 @@
+services:
+  ser-fullstack:
+    build: .
+    container_name: ser-fullstack
+    ports:
+      - "8001:8001" # backend
+      - "3000:80" # frontend
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./app/backend/models:/app/models
+    # For dev mode, uncomment to mount backend/frontend over container code
+    # volumes:
+    #   - ./app/backend:/app/backend
+    #   - ./app/frontend:/app/frontend
+    #   - ./app/frontend_build:/app/frontend_build
